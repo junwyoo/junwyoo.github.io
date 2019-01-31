@@ -13,7 +13,7 @@ It is where you store your state. That is all you have to know. Most of the case
 
 ### Action
 
-The ** WHAT **. It is a plain JavaScript Object. Usually, you want to wrap this with a function, which is often called the `ActionCreator`. An action object looks something like this : 
+The **WHAT**. It is a plain JavaScript Object. Usually, you want to wrap this with a function, which is often called the `ActionCreator`. An action object looks something like this : 
 
 ```javascript
 {
@@ -38,7 +38,7 @@ function someAction(payload) {
 
 ### Reducer
 
-The ** HOW **. It is a plain JavaScript Function. 
+The **HOW**. It is a plain JavaScript Function. 
 
 ## Coding Principles
 
