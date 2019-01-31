@@ -4,7 +4,10 @@ A personal website hosted on github.
 
 ## Projects
 
-None.
+1. [React-Redux style guide](https://junwyoo.github.io/react-redux-style-guide.md) : 
+** DISCLAIMER ** This guide is written for me. Read at you own risk.
+
+2. [BLeND Project] : Private for now.
 
 ## Bio
 
