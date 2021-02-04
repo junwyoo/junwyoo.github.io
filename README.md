@@ -1,13 +1,17 @@
-# Junwhan (Raphael) Yoo
+# Junwhan Yoo
 
 A personal website hosted on github.
 
 ## Projects
 
-1. [React-Redux style guide](https://junwyoo.github.io/react-redux-style-guide.md) : 
-**DISCLAIMER** This guide is written for me. Read at you own risk.
+1. Homepage under construction...
+2. Published npm packages
+    - nullsy<>
 
-2. [BLeND Project](https://junwyoo.github.io) : Private for now.
+## Page History
+Date | Description | Etc
+-- | -- | --
+2021-02-03 | Initial commit |
 
 ## Bio
 
