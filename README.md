@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "junwyoo.github.io"
+---
+
 # Junwhan Yoo
 
 A personal website hosted on github.
