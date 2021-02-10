@@ -1,6 +1,5 @@
 ---
 layout: post
-title:  "junwyoo.github.io"
 ---
 
 # Junwhan Yoo
@@ -13,10 +12,8 @@ A personal website hosted on github.
     - [nullsy](https://www.npmjs.com/package/nullsy): A lightweight validity checker for node.js
 
 ## Page History
-| Date | Description | Etc |
-| -- | -- | -- |
-| 2021-02-07 | Change Theme with Jekyll | |
-| 2021-02-03 | Initial commit | |
+- 2021-02-07 | Change Theme with Jekyll
+- 2021-02-03 | Initial commit
 
 ## About Me
 - Current job status: Full-time SW Developer
