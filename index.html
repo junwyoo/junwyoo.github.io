@@ -1,126 +1,300 @@
 <html>
-    <script type="text/javascript">
-    var canvas, ctx, flag = false,
-        prevX = 0,
-        currX = 0,
-        prevY = 0,
-        currY = 0,
-        dot_flag = false;
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <body>
 
-    var x = "black",
-        y = 2;
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfK-6x8D26moz9YtoLqLBkUTvZCYIAQrg9HSFxzw3NvM563ng/formResponse" target="_self" id="bootstrapForm" method="POST" style="display:inline-block;">
+            <fieldset>
+                <h2>LG전자 사람중심 사무직 노동조합 가입 신청서 (온라인 제출)<br><small>본 신청서는 서명 후 제출 즉시 효력이 생기며, 실질적 업무나 직책에 따라 가입이 반려될 수 있습니다.
+                        온라인 서류 서명이 익숙하지 않은 분은 본 페이지 대신 따로 신청서를 받아 lgesamunozo@gmail.com 으로 보내주시기 바랍니다.
+                        양식 다운로드는 밴드 공지 참조 (https://band.us/band/83019543/post/4)</small></h2>
+            </fieldset>
 
-    function init() {
-        canvas = document.getElementById('can');
-        ctx = canvas.getContext("2d");
-        w = canvas.width;
-        h = canvas.height;
+            <!-- Field type: "short" id: "2087855222" -->
+            <fieldset>
+                <legend for="2087855222">이름</legend>
+                <div class="form-group">
+                    <input id="119446736" type="text" name="entry.119446736" class="form-control" required>
+                </div>
+            </fieldset>
 
-        canvas.addEventListener("mousemove", function (e) {
-            findxy('move', e)
-        }, false);
-        canvas.addEventListener("mousedown", function (e) {
-            findxy('down', e)
-        }, false);
-        canvas.addEventListener("mouseup", function (e) {
-            findxy('up', e)
-        }, false);
-        canvas.addEventListener("mouseout", function (e) {
-            findxy('out', e)
-        }, false);
-    }
+            <!-- Field type: "short" id: "718704566" -->
+            <fieldset>
+                <legend for="718704566">생년월일</legend>
+                <div class="form-group">
+                    <p class="help-block">숫자로만 입력해주세요 (예: 870225)</p>
+                    <input id="909029125" type="text" name="entry.909029125" class="form-control" required>
+                </div>
+            </fieldset>
 
-    function color(obj) {
-        switch (obj.id) {
-            case "green":
-                x = "green";
-                break;
-            case "blue":
-                x = "blue";
-                break;
-            case "red":
-                x = "red";
-                break;
-            case "yellow":
-                x = "yellow";
-                break;
-            case "orange":
-                x = "orange";
-                break;
-            case "black":
-                x = "black";
-                break;
-            case "white":
-                x = "white";
-                break;
-        }
-        if (x == "white") y = 14;
-        else y = 2;
+            <!-- Field type: "choices" id: "1029513438" -->
+            <fieldset>
+                <legend for="1029513438">성별</legend>
+                <div class="form-group">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.1106734077" value="남" required>
+                            남
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.1106734077" value="여" required>
+                            여
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.1106734077" value="명시 안함" required>
+                            명시 안함
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
 
-    }
 
-    function draw() {
-        ctx.beginPath();
-        ctx.moveTo(prevX, prevY);
-        ctx.lineTo(currX, currY);
-        ctx.strokeStyle = x;
-        ctx.lineWidth = y;
-        ctx.stroke();
-        ctx.closePath();
-    }
+            <!-- Field type: "short" id: "2018992104" -->
+            <fieldset>
+                <legend for="2018992104">핸드폰</legend>
+                <div class="form-group">
+                    <p class="help-block">숫자로만 입력해주세요 (형식: 01012345678)</p>
+                    <input id="1186268053" type="text" name="entry.1186268053" class="form-control" required>
+                </div>
+            </fieldset>
 
-    function erase() {
-        var m = confirm("Want to clear");
-        if (m) {
-            ctx.clearRect(0, 0, w, h);
-            document.getElementById("canvasimg").style.display = "none";
-        }
-    }
 
-    function save() {
-        document.getElementById("canvasimg").style.border = "2px solid";
-        var dataURL = canvas.toDataURL();
-        document.getElementById("canvasimg").src = dataURL;
-        document.getElementById("canvasimg").style.display = "inline";
-    }
+            <!-- Field type: "short" id: "732068616" -->
+            <fieldset>
+                <legend for="732068616">이메일 주소</legend>
+                <div class="form-group">
+                    <input id="325964963" type="text" name="entry.325964963" class="form-control" required>
+                </div>
+            </fieldset>
 
-    function findxy(res, e) {
-        if (res == 'down') {
-            prevX = currX;
-            prevY = currY;
-            currX = e.clientX - canvas.offsetLeft;
-            currY = e.clientY - canvas.offsetTop;
 
-            flag = true;
-            dot_flag = true;
-            if (dot_flag) {
-                ctx.beginPath();
-                ctx.fillStyle = x;
-                ctx.fillRect(currX, currY, 2, 2);
-                ctx.closePath();
-                dot_flag = false;
-            }
-        }
-        if (res == 'up' || res == "out") {
-            flag = false;
-        }
-        if (res == 'move') {
-            if (flag) {
-                prevX = currX;
-                prevY = currY;
-                currX = e.clientX - canvas.offsetLeft;
-                currY = e.clientY - canvas.offsetTop;
-                draw();
-            }
-        }
-    }
-    </script>
-    <body onload="init()">
-        <canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>
-        <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
-        <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:55%;left:10%;">
-        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
+            <!-- Field type: "choices" id: "597789580" -->
+            <fieldset>
+                <legend for="597789580">소속 본부</legend>
+                <div class="form-group">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.864483767" value="H&amp;A" required>
+                            H&amp;A
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.864483767" value="HE" required>
+                            HE
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.864483767" value="MC" required>
+                            MC
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.864483767" value="VS" required>
+                            VS
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.864483767" value="BS" required>
+                            BS
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.864483767" value="CTO" required>
+                            CTO
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.864483767" value="__other_option__" required>
+                        </label>
+                        <input type="text" name="entry.864483767.other_option_response" placeholder="custom value">
+                    </div>
+                </div>
+            </fieldset>
 
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeaEjn1SktKZelcn1F2IDFdW4YxClIITtT9KchhbHrYFXMfbA/viewform?embedded=true" width="640" height="383" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>
+
+            <!-- Field type: "choices" id: "792705411" -->
+            <fieldset>
+                <legend for="792705411">직급</legend>
+                <div class="form-group">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.404678265" value="책임" required>
+                            책임
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.404678265" value="선임" required>
+                            선임
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.404678265" value="사원/연구원" required>
+                            사원/연구원
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.404678265" value="__other_option__" required>
+                        </label>
+                        <input type="text" name="entry.404678265.other_option_response" placeholder="custom value">
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <!-- Field type: "choices" id: "1782657649" -->
+            <fieldset>
+                <legend for="1782657649">사용자 이익 대표자 해당 여부</legend>
+                <div class="form-group">
+                    <p class="help-block">임원, 비서, 직원의 급여를 결정하는 직책 등 사업의 경영담당자, 근로자에 관한 사항에 대하여 사업주를 위하여 행동하는 자, 항상 사용자의 이익을 대표하여
+                        행동하는 자 해당 여부. 단순 개발직이라면 해당 무.</p>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.966741936" value="미해당" required>
+                            미해당
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.966741936" value="해당 (가입이 안돼요)" required>
+                            해당 (가입이 안돼요)
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.966741936" value="모르겠음 (다음 질문 답변 필)" required>
+                            모르겠음 (다음 질문 답변 필)
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <!-- Field type: "paragraph" id: "1910273225" -->
+            <fieldset>
+                <legend for="1910273225">(&quot;모르겠음&quot; 답변시) 현재 담당하는 실질적 업무와 직급, 직책을 자세히 적어주세요.</legend>
+                <div class="form-group">
+                    <textarea id="1651920088" name="entry.1651920088" class="form-control"></textarea>
+                </div>
+            </fieldset>
+
+
+            <!-- Field type: "short" id: "1540949781" -->
+            <fieldset>
+                <legend for="1540949781">입사연월일</legend>
+                <div class="form-group">
+                    <p class="help-block">숫자로만 입력해 주세요 (형식: 210225)</p>
+                    <input id="2020695976" type="text" name="entry.2020695976" class="form-control" required>
+                </div>
+            </fieldset>
+
+
+            <!-- Field type: "short" id: "1748430169" -->
+            <fieldset>
+                <legend for="1748430169">부서</legend>
+                <div class="form-group">
+                    <input id="584901161" type="text" name="entry.584901161" class="form-control" required>
+                </div>
+            </fieldset>
+
+
+            <!-- Field type: "paragraph" id: "1987070141" -->
+            <fieldset>
+                <legend for="1987070141">주소 (자택)</legend>
+                <div class="form-group">
+                    <textarea id="929018776" name="entry.929018776" class="form-control" required></textarea>
+                </div>
+            </fieldset>
+
+
+            <!-- Field type: "paragraph" id: "1660910797" -->
+            <fieldset>
+                <legend for="1660910797">주소 (근무처)</legend>
+                <div class="form-group">
+                    <textarea id="1094978843" name="entry.1094978843" class="form-control" required></textarea>
+                </div>
+            </fieldset>
+
+
+            <!-- Field type: "short" id: "731623840" -->
+            <fieldset>
+                <legend for="731623840">가입 신청서 동의</legend>
+                위 본인은 귀 ‘LG전자 사람중심 사무직 노동조합’의 설립 취지 및 규약에 공감하여 자발적 의사에 의하여 조합 가입을 원하며, 가입 후 조합원으로서 의무를 성실히 수행하며 귀 노동조합의 결의 및
+                지시사항을 준수할 것을 서약합니다.
+                <div class="form-group">
+                    <p class="help-block">오늘 날짜를 입력해 주세요 (형식: 210225)</p>
+                    <input id="385405824" type="text" name="entry.385405824" class="form-control" required>
+                </div>
+
+                <!-- Field type: "short" id: "1973133562" -->
+                <legend for="1973133562">신청인 이름</legend>
+                <div class="form-group">
+                    <input id="1934200759" type="text" name="entry.1934200759" class="form-control" required>
+                </div>
+
+                <!-- Field type: "short" id: "1599870994" -->
+                <legend for="1599870994">신청인 서명</legend>
+                <div class="form-group">
+                    <input id="618241742" type="hidden" name="entry.618241742" class="form-control" required>
+                </div>
+
+                <canvas id="signature-pad" width="200" height="200" style="top:10%;left:10%;border:2px solid;"></canvas>
+            </fieldset>
+
+
+
+
+            <!-- Field type: "short" id: "835883156" -->
+            <fieldset>
+                <legend for="835883156">하고싶은말! (선택)</legend>
+                <div class="form-group">
+                    <input id="1468303953" type="text" name="entry.1468303953" class="form-control">
+                </div>
+            </fieldset>
+
+            <input type="hidden" name="fvv" value="1">
+            <input type="hidden" name="fbzx" value="-5247123717618791304">
+            <!--
+                CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+                This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+                Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+                We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+            -->
+            <input type="hidden" name="pageHistory" value="0">
+
+            <input class="btn btn-primary" type="submit" value="Submit" onclick="beforeSubmit()">
+        </form>
+
+
+        <input type="button" value="save" id="btn" size="30" onclick="save()" style="display:flex;top:55%;left:10%;" />
+        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="display:flex;top:55%;left:15%;" />
     </body>
-    </html>
+    <script type="text/javascript">
+        var signaturePad = new SignaturePad(document.getElementById('signature-pad'), {
+            backgroundColor: 'rgba(255, 255, 255, 0)',
+            penColor: 'rgb(0, 0, 0)'
+        });
+        console.log('SIG', signaturePad)
+
+        function beforeSubmit () {
+            var nameDefault = document.getElementById('618241742');
+            nameDefault.value = signaturePad.toDataURL('image/png');
+
+            console.log(nameDefault.value)
+            return function () {
+                console.log('HI');
+            }
+        }
+    </script>
+</html>
