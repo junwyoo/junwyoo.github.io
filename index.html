@@ -1,19 +1,22 @@
 <html>
+    <!-- Script for signature pad -->
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+
     <body>
 
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfK-6x8D26moz9YtoLqLBkUTvZCYIAQrg9HSFxzw3NvM563ng/formResponse" target="_self" id="bootstrapForm" method="POST" style="display:inline-block;">
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfK-6x8D26moz9YtoLqLBkUTvZCYIAQrg9HSFxzw3NvM563ng/formResponse" target="_self" id="bootstrapForm" method="POST" style="display:inline-block;max-width: 700px;">
             <fieldset>
-                <h2>LG전자 사람중심 사무직 노동조합 가입 신청서 (온라인 제출)<br><small>본 신청서는 서명 후 제출 즉시 효력이 생기며, 실질적 업무나 직책에 따라 가입이 반려될 수 있습니다.
+                <h2>LG전자 사람중심 사무직 노동조합 가입 신청서 (온라인 제출)</h2>
+                <p>본 신청서는 서명 후 제출 즉시 효력이 생기며, 실질적 업무나 직책에 따라 가입이 반려될 수 있습니다.
                         온라인 서류 서명이 익숙하지 않은 분은 본 페이지 대신 따로 신청서를 받아 lgesamunozo@gmail.com 으로 보내주시기 바랍니다.
-                        양식 다운로드는 밴드 공지 참조 (https://band.us/band/83019543/post/4)</small></h2>
+                        양식 다운로드는 밴드 공지 참조 (https://band.us/band/83019543/post/4)</p>
             </fieldset>
 
             <!-- Field type: "short" id: "2087855222" -->
             <fieldset>
                 <legend for="2087855222">이름</legend>
                 <div class="form-group">
-                    <input id="119446736" type="text" name="entry.119446736" class="form-control" required>
+                    <input placeholder="홍길동" id="119446736" type="text" name="entry.119446736" class="form-control" required>
                 </div>
             </fieldset>
 
@@ -21,8 +24,8 @@
             <fieldset>
                 <legend for="718704566">생년월일</legend>
                 <div class="form-group">
-                    <p class="help-block">숫자로만 입력해주세요 (예: 870225)</p>
-                    <input id="909029125" type="text" name="entry.909029125" class="form-control" required>
+                    <p class="help-block">숫자로만 입력해주세요 (YYMMDD)</p>
+                    <input placeholder="911029" id="909029125" type="text" name="entry.909029125" class="form-control" required>
                 </div>
             </fieldset>
 
@@ -56,8 +59,8 @@
             <fieldset>
                 <legend for="2018992104">핸드폰</legend>
                 <div class="form-group">
-                    <p class="help-block">숫자로만 입력해주세요 (형식: 01012345678)</p>
-                    <input id="1186268053" type="text" name="entry.1186268053" class="form-control" required>
+                    <p class="help-block">숫자로만 입력해주세요</p>
+                    <input placeholder="01012345678" id="1186268053" type="text" name="entry.1186268053" class="form-control" required>
                 </div>
             </fieldset>
 
@@ -66,7 +69,7 @@
             <fieldset>
                 <legend for="732068616">이메일 주소</legend>
                 <div class="form-group">
-                    <input id="325964963" type="text" name="entry.325964963" class="form-control" required>
+                    <input placeholder="lgesamunozo@gmail.com" id="325964963" type="text" name="entry.325964963" class="form-control" required>
                 </div>
             </fieldset>
 
@@ -194,8 +197,8 @@
             <fieldset>
                 <legend for="1540949781">입사연월일</legend>
                 <div class="form-group">
-                    <p class="help-block">숫자로만 입력해 주세요 (형식: 210225)</p>
-                    <input id="2020695976" type="text" name="entry.2020695976" class="form-control" required>
+                    <p class="help-block">숫자로만 입력해 주세요 (YYMMDD))</p>
+                    <input placeholder="210225" id="2020695976" type="text" name="entry.2020695976" class="form-control" required>
                 </div>
             </fieldset>
 
@@ -233,8 +236,8 @@
                 위 본인은 귀 ‘LG전자 사람중심 사무직 노동조합’의 설립 취지 및 규약에 공감하여 자발적 의사에 의하여 조합 가입을 원하며, 가입 후 조합원으로서 의무를 성실히 수행하며 귀 노동조합의 결의 및
                 지시사항을 준수할 것을 서약합니다.
                 <div class="form-group">
-                    <p class="help-block">오늘 날짜를 입력해 주세요 (형식: 210225)</p>
-                    <input id="385405824" type="text" name="entry.385405824" class="form-control" required>
+                    <p class="help-block">오늘 날짜를 입력해 주세요</p>
+                    <input value="" id="385405824" type="text" name="entry.385405824" class="form-control" required>
                 </div>
 
                 <!-- Field type: "short" id: "1973133562" -->
@@ -252,9 +255,6 @@
                 <canvas id="signature-pad" width="200" height="200" style="top:10%;left:10%;border:2px solid;"></canvas>
             </fieldset>
 
-
-
-
             <!-- Field type: "short" id: "835883156" -->
             <fieldset>
                 <legend for="835883156">하고싶은말! (선택)</legend>
@@ -265,36 +265,12 @@
 
             <input type="hidden" name="fvv" value="1">
             <input type="hidden" name="fbzx" value="-5247123717618791304">
-            <!--
-                CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
-                This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
-                Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
-                We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
-            -->
             <input type="hidden" name="pageHistory" value="0">
 
-            <input class="btn btn-primary" type="submit" value="Submit" onclick="beforeSubmit()">
+            <input id="save-to-pdf" class="btn btn-primary" type="button" value="신청서 pdf로 다운">
+            <input id="final-submit" class="btn btn-primary" type="submit" disabled="true" value="업로드 하러 가기">
         </form>
-
-
-        <input type="button" value="save" id="btn" size="30" onclick="save()" style="display:flex;top:55%;left:10%;" />
-        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="display:flex;top:55%;left:15%;" />
     </body>
-    <script type="text/javascript">
-        var signaturePad = new SignaturePad(document.getElementById('signature-pad'), {
-            backgroundColor: 'rgba(255, 255, 255, 0)',
-            penColor: 'rgb(0, 0, 0)'
-        });
-        console.log('SIG', signaturePad)
 
-        function beforeSubmit () {
-            var nameDefault = document.getElementById('618241742');
-            nameDefault.value = signaturePad.toDataURL('image/png');
-
-            console.log(nameDefault.value)
-            return function () {
-                console.log('HI');
-            }
-        }
-    </script>
+    <script type="text/javascript" src="dist/index.bundle.js"></script>
 </html>
