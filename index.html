@@ -26,6 +26,18 @@
                     font-size: 3.5rem;
                 }
             }
+
+            table, th, td {
+                border: 1px solid black;
+            }
+
+            th {
+                text-align: center;
+            }
+
+            th, td {
+                padding: 10px;
+            }
         </style>
     </head>
 
@@ -191,8 +203,13 @@
                     <div class="col-md-7 col-lg-8">
                         <h3 class="form-label" for="1782657649" required>사용자 이익 대표자 해당 여부</h3>
                         <div class="form-group">
-                            <label class="help-block">임원, 비서, 직원의 급여를 결정하는 직책 등 사업의 경영담당자, 근로자에 관한 사항에 대하여 사업주를 위하여 행동하는 자, 항상 사용자의 이익을 대표하여
-                                행동하는 자 해당 여부. 단순 개발직이라면 해당 무.</label>
+                            <label class="help-block">
+                                (1) 임원 등 사업경영담당자 <br />
+                                (2) 부서장(최종 인사고과 평정권자), 인사부 등 근로자에 관한 사항에 대하여 사업주를 위하여 행동하는 자 <br />
+                                (3) 그 외 감사부, 임원 비서 및 운전기사 등 인사, 급여, 복리후생, 징계, 감사 등 근로조건의 결정에 직접 참여하거나
+                                근로관계에 대한 계획 및 방침에 관한 기밀사항을 취급하는 직책 등 해당여부 <br />
+                                단, 단순 개발직이거나 1차 인사고과 평정권자의 직책(팀장 등)은 가입 가능
+                            </label>
                             <div class="radio">
                                 <label>
                                     <input type="radio" name="entry.966741936" value="미해당" required>
@@ -303,6 +320,33 @@
                         <label class="form-label" id="label-390780275" required for="390780275">
                             1. <b id="span-390780275">_________</b> (이하 ‘갑’이라 함)은(는) LG전자 사람중심 사무직 노동조합(이하 ‘을’이라 함)이 노동관계법령상 근로조건 유지·개선 및 단체교섭과 단체협약 체결 및 노동조합의 원활한 운영을 위하여 다음과 같은 개인 정보·민감 정보·고유 식별 정보를 수집·이용하는 것에 동의합니다.
                         </label>
+                        <table>
+                            <tr>
+                                <th>
+                                    개인정보항목
+                                </th>
+                                <th>
+                                    수집, 이용 목적
+                                </th>
+                                <th>
+                                    보유기간
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="width: 50%;">
+                                    가. 성명, 주민등록번호<br />
+                                    나. 주소, 이메일, 연락처<br />
+                                    다. 입사년월일, 근무경력<br />
+                                </td>
+                                <td>
+                                    노동관계법령상 근로조건 유지·개선 및 단체교섭과 단체협약 체결 및 노동조합의 원활한 운영을 위함
+                                </td>
+                                <td style="width: 20%;">
+                                    본 노동조합 조합원으로서의 가입기간
+                                </td>
+                            </tr>
+
+                        </table>
                         <div class="form-group">
                             <div class="radio">
                                 <label>
