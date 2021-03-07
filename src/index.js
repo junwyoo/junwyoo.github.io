@@ -26,7 +26,7 @@ document.body.onload = function () {
 }
 
 document.getElementById('119446736').onchange = function () {
-    document.getElementById('span-390780275').innerText = document.getElementById('119446736').value;
+    document.getElementById('span-390780275').value = document.getElementById('119446736').value;
 }
 
 document.getElementById('save-to-pdf').onclick = function () {
