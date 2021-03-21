@@ -14,8 +14,11 @@ var personalInfoSign = new SignaturePad(document.getElementById('signature-pad-p
     penColor: 'rgb(0, 0, 0)'
 });
 
-document.getElementById('clear-signature').onclick = function () {
+document.getElementById('clear-signature-registration').onclick = function () {
     registrationSign.clear();
+}
+
+document.getElementById('clear-signature-personal').onclick = function () {
     personalInfoSign.clear();
 }
 
@@ -30,6 +33,13 @@ document.getElementById('119446736').onchange = function () {
 }
 
 document.getElementById('save-to-pdf').onclick = function () {
+    var emailInput = document.getElementById('325964963');
+
+    if (emailInput.value.endsWith('@lge.com')) {
+        alert('회사 이메일은 안돼요!');
+        return;
+    }
+
     html2canvas(document.body, {
         scrollX: 0,
         scrollY: 0

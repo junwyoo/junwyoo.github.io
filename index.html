@@ -110,7 +110,7 @@
 
                     <!-- Field type: "short" id: "732068616" -->
                     <div class="col-md-7 col-lg-8">
-                        <label class="form-label" for="732068616" required>이메일 주소</label>
+                        <label class="form-label" for="732068616" required>이메일 주소 (회사 이메일은 안돼요)</label>
                         <div class="form-group">
                             <input placeholder="lgesamunozo@gmail.com" id="325964963" type="text" name="entry.325964963" class="form-control" required>
                         </div>
@@ -302,6 +302,7 @@
                         </div>
 
                         <canvas id="signature-pad" width="200" height="200" style="top:10%;left:10%;border:2px solid;"></canvas>
+                        <input id="clear-signature-registration" class="btn btn-primary" type="button" value="서명 초기화">
                     </div>
 
                     <!-- 개인 정보 수집 이용에 관한 동의 -->
@@ -423,6 +424,7 @@
                         <label class="form-label" required>동의자 서명</label>
                         <div class="form-group">
                             <canvas id="signature-pad-personal-info" width="200" height="200" style="top:10%;left:10%;border:2px solid;"></canvas>
+                            <input id="clear-signature-personal" class="btn btn-primary" type="button" value="서명 초기화">
                         </div>
                     </div>
 
@@ -438,9 +440,12 @@
                     <input type="hidden" name="fbzx" value="-5247123717618791304">
                     <input type="hidden" name="pageHistory" value="0">
 
-                    <input id="save-to-pdf" class="btn btn-primary" type="button" value="신청서 다운">
-                    <input id="clear-signature" class="btn btn-primary" type="button" value="서명 초기화">
-                    <input id="final-submit" class="btn btn-primary" type="submit" disabled="true" value="업로드 하러 가기">
+                    <h3 class="form-label">신청 방법</h3>
+                    <label class="form-label">1. "신청서 다운" 클릭시 작성된 현 페이지를 이미지 파일 형식으로 캡쳐, 저장되며, "업로드 하러 가기" 버튼이 활성화 됩니다.</label>
+                    <label class="form-label">2. "업로드 하러 가기" 버튼을 클릭하면 구글 폼 페이지로 이동되며 신청서 내용이 자동으로 입력됩니다. (구글 아이디 미리 로그인 필요)</label>
+                    <label class="form-label">3. 구글 폼 항목 중 업로드 문항에 다운로드 받았던 이미지 파일을 올립니다.</label>
+                    <input id="save-to-pdf" class="btn btn-primary" type="button" value="1. 신청서 다운">
+                    <input id="final-submit" class="btn btn-primary" type="submit" disabled="true" value="2. 업로드 하러 가기">
                 </div>
             </div>
         </form>
