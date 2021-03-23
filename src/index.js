@@ -29,7 +29,10 @@ document.body.onload = function () {
 }
 
 document.getElementById('119446736').onchange = function () {
-    document.getElementById('span-390780275').value = document.getElementById('119446736').value;
+    var nameInput = document.getElementById('119446736').value
+    document.getElementById('span-390780275').value = nameInput;
+    document.getElementById('1934200759').value = nameInput;
+    document.getElementById('510232634').value = nameInput;
 }
 
 document.getElementById('save-to-pdf').onclick = function () {
