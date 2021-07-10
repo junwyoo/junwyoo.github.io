@@ -43,6 +43,11 @@ document.getElementById('save-to-pdf').onclick = function () {
         return;
     }
 
+    if (registrationSign.isEmpty() || personalInfoSign.isEmpty()) {
+        alert('서명을 해주세요!');
+        return;
+    }
+
     html2canvas(document.body, {
         scrollX: 0,
         scrollY: 0
